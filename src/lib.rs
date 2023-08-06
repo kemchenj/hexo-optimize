@@ -59,6 +59,18 @@ fn minify(mut cx: FunctionContext) -> JsResult<JsBuffer> {
             .get_opt::<JsBoolean, _, _>(&mut cx, "minify_css")?
             .map(|v| v.value(&mut cx))
             .unwrap_or(false),
+        minify_css_level_1: opt
+            .get_opt::<JsBoolean, _, _>(&mut cx, "minify_css_level_1")?
+            .map(|v| v.value(&mut cx))
+            .unwrap_or(true),
+        minify_css_level_2: opt
+            .get_opt::<JsBoolean, _, _>(&mut cx, "minify_css_level_2")?
+            .map(|v| v.value(&mut cx))
+            .unwrap_or(false),
+        minify_css_level_3: opt
+            .get_opt::<JsBoolean, _, _>(&mut cx, "minify_css_level_3")?
+            .map(|v| v.value(&mut cx))
+            .unwrap_or(false),
         minify_js: opt
             .get_opt::<JsBoolean, _, _>(&mut cx, "minify_js")?
             .map(|v| v.value(&mut cx))
