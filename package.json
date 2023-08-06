@@ -8,13 +8,13 @@
     "Cargo.toml",
     "lib",
     "index.js",
+    "index.node",
     "postinstall.js"
   ],
   "scripts": {
-    "build": "cargo-cp-artifact --artifact cdylib html-minify index.node -- cargo build --message-format=json-render-diagnostics",
+    "build": "cargo-cp-artifact --artifact cdylib html-minify index.node -- cargo build --target=x86_64-apple-darwin --message-format=json-render-diagnostics",
     "build-release": "npm run build -- --release",
-    "lint": "eslint index.js lib",
-    "postinstall": "node postinstall.js"
+    "lint": "eslint index.js lib"
   },
   "repository": "next-theme/hexo-optimize",
   "keywords": [

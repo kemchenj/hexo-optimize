@@ -6,6 +6,9 @@ description = "Node.js bindings for html-minify"
 authors = ["Wilson Lin <npm@wilsonl.in>"]
 edition = "2021"
 
+[build]
+target = "x86_64-apple-darwin"
+
 [lib]
 crate-type = ["cdylib"]
 
